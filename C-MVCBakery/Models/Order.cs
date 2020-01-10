@@ -1,17 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Template.Models
+namespace PierresBakery.Models
 {
-  public class Parcel
+  public class Order
   {
-    public string Length { get; set; }
-    public string Width { get; set; }
-    public string Width { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public double Price { get; set; }
+    public string Date { get; set; }
+    public int Id { get; }
+    private static List<Order> _instances = new List<Order> {};
 
-    public Parcel(string test1, string test2)
+    public Order(string title, string description, double price, string date)
     {
-        Test1 = test1;
-        Test2 = test2;
+        Title = title;
+        Description = description;
+        Price = price;
+        Date = date;
+        Id = _instances.Count;
+        _instances.Add(this);
     }
     //Here we have the constructors that will be passed into our route then to our main page
   }
