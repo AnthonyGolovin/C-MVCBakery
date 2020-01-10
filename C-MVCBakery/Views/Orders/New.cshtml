@@ -6,5 +6,21 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <h1>
-      Add order for vendor
+      Add order for vendor for @Model.VendorTitle
   </h1>
+  <Form action ="/vendors/@ModelExpressionProvider.Id/orders" method="post">
+    <label for="title">Order Name:</label>
+    <input id="title" name="title" type="text">
+
+    <label for="description">Order Description</label>
+    <input id="description" name="description" type="text">
+
+    <label for="price">Product Price</label>
+    <input id="price" name="price" type="text">
+
+    <label for="date">Date</label>
+    <input id="date" name="date" type="text">
+
+    <button type="submit">Submit</button>
+  </Form>
+</html>
