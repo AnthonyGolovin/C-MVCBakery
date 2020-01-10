@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace PierresBakery.Models
 {
@@ -12,7 +13,7 @@ namespace PierresBakery.Models
 
     public Vendor(string vendorTitle, string description)
     {
-        Title = title;
+        VendorTitle = vendorTitle;
         Description = description;
         Id = _instances.Count;
         _instances.Add(this);
